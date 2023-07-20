@@ -1,0 +1,20 @@
+{% extends 'user_authentication/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block style %}
+{% endblock  %}
+
+{% block content %}
+<form style="width: 30%; margin: auto" method="post" action="{% url 'update' %}">
+    <h1 class="text-warning">Update your Data</h1>
+    {% csrf_token %}
+    <!--{{form|crispy}}-->
+    {% for fm in form %}
+    <h3>{{ fm.label_tag }}</h3> {{fm}}
+    {% endfor %}
+    <br>
+    <br>
+    <button class="btn btn-warning" type="submit">Save</button>
+  </form>
+</form>
+{% endblock  %}
