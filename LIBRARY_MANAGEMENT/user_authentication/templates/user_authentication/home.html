@@ -21,11 +21,6 @@
 <div class="container">
   {% if user.is_authenticated %}
   <h1 class="text-success">Welcome, {{ name }}</h1>
-  {% else %}
-  
-  <h1 class="Wellcome-rule">Hi, This is SA. Library. Here we provide books for free for some days.<br>
-    If you want to join us, please login or sign up.</h1>
-  {% endif %}
 
 </div>
 <div class="rules-content">
@@ -55,6 +50,12 @@
     <p>Then search button will shown by the side of button</p>
     <p>You can search by book title or genre</p>
   </div>
+  {% else %}    
+  <h1 class="Wellcome-rule">Hi, This is SA. Library. Here we provide books for free for some days.<br>
+    If you want to join us, please login or sign up.</h1>
+  {% endif %}
 </div>
 <br>
+
+
 {% endblock %}
